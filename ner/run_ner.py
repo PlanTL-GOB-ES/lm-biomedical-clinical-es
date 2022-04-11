@@ -231,8 +231,6 @@ def main():
     if data_args.dataset_name is not None:
         # Downloading and loading a dataset from the hub.
         datasets = load_dataset(data_args.dataset_name)
-    elif data_args.conll_loading_script:
-        datasets = load_dataset(data_args.conll_loading_script, cache_dir=model_args.cache_dir)
     else:
         data_files = {}
         if data_args.train_file is not None:
