@@ -87,24 +87,24 @@ print(results)
 
 1) First, clone the project:
 
-`git clone https://github.com/PlanTL-GOB-ES/lm-biomedical-clinical-es/blob/master/README.md`
+   `git clone https://github.com/PlanTL-GOB-ES/lm-biomedical-clinical-es/blob/master/README.md`
 
 2) Set up a Python virtual environment and activate it
 
-`python3.8 -m venv venv; source venv/bin/activate`
+    `python3.8 -m venv venv; source venv/bin/activate`
 
 3) Install all the required python packages in the virtual environment running the following line from the project main folder:
- `pip install -r requirements.txt`.
+   `pip install -r requirements.txt`.
 
 4) Finally, run the following command on the project main folder: `bash ner.sh [MODEL_NAME] [DATASET_NAME] [SEED]`, where
 
-- [MODEL_NAME]: HuggingFace' model name of the pretrained model you want to use.
-- [DATASET_NAME]: HuggingFace' dataset name of the NER dataset to use. Can be chosen from "PlanTL-GOB-ES/cantemist-ner" and "PlanTL-GOB-ES/pharmaconer", depending on the dataset you want to use.
-- [SEED]: the seed you want to use. This allows to reproduce the same results.
+  - `[MODEL_NAME]`: HuggingFace' model name of the pretrained model you want to use.
+  - `[DATASET_NAME]`: HuggingFace' dataset name of the NER dataset to use. Can be chosen from "PlanTL-GOB-ES/cantemist-ner" and "PlanTL-GOB-ES/pharmaconer", depending on the dataset you want to use.
+  - `[SEED]`: the seed you want to use. This allows to reproduce the same results.
 
 The `ner.sh` script fine-tune a pretrained language model for the NER task applying a linear classification head. By default, the fine-tuning run for 10 epochs with an evaluation on the development set at every epoch. The model achieving the best performance on the development set is selected as the final model and evaluated on the test set. The best trained model is store in a output path of the type `./output/model-$model_name/dataset-$dataset_name/seed-$seed` along with the checkpoints folders and the tensorboard data (inside the `tb` directory). 
 
-For example, to fine-tune the _bsc-bio-es_ language model on the PharmaCoNER dataset, run the command: 
+For example, to fine-tune the [bsc-bio-ehr-es](https://huggingface.co/PlanTL-GOB-ES/roberta-base-biomedical-clinical-es) language model on the PharmaCoNER dataset, run the command: 
 `bash ner.sh PlanTL-GOB-ES/bsc-bio-ehr-es PlanTL-GOB-ES/pharmaconer 42`
 
 ## Cite 📣
