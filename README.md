@@ -45,7 +45,7 @@ Eventually, the clinical corpus is concatenated to the cleaned biomedical corpus
 | PubMed                                                                                  | 1,858,966   | Open-access articles from the PubMed repository crawled in 2017.                                                                                                                                                                   
 
 ## Evaluation ✅
-The models have been fine-tuned on the the Named Entity Recognition (NER) tasks using three clinical NER datasets, such as, [PharmaCoNER](https://zenodo.org/record/4270158), [CANTEMIST](https://zenodo.org/record/3978041#.YTt5qH2xXbQ) and ICTUSnet. We addressed the NER task as a token classification problem using a standard linear layer along with the BIO tagging schema. We compared our models with the general-domain Spanish [roberta-base-bne](https://huggingface.co/PlanTL-GOB-ES/roberta-base-bne), the general-domain multilingual model that supports Spanish [mBERT](https://huggingface.co/bert-base-multilingual-cased), the domain-specific English model [BioBERT](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2), and three domain-specific models based on continual pre-training, [mBERT-Galén](https://ieeexplore.ieee.org/document/9430499), [XLM-R-Galén](https://ieeexplore.ieee.org/document/9430499) and [BETO-Galén](https://ieeexplore.ieee.org/document/9430499). The results in the table below show the F1 scores obtained:
+The models have been fine-tuned on the the Named Entity Recognition (NER) tasks using three clinical NER datasets, such as, [PharmaCoNER](https://zenodo.org/record/4270158), [CANTEMIST](https://zenodo.org/record/3978041#.YTt5qH2xXbQ) and ICTUSnet. We addressed the NER task as a token classification problem using a standard linear layer along with the BIO tagging schema. We compared our models with the general-domain Spanish [roberta-base-bne](https://huggingface.co/PlanTL-GOB-ES/roberta-base-bne), the general-domain multilingual model that supports Spanish [mBERT](https://huggingface.co/bert-base-multilingual-cased), the domain-specific English model [BioBERT](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2), and three domain-specific models based on continual pre-training, [mBERT-Galén](https://ieeexplore.ieee.org/document/9430499), [XLM-R-Galén](https://ieeexplore.ieee.org/document/9430499) and [BETO-Galén](https://ieeexplore.ieee.org/document/9430499). The table below shows the F1 scores obtained:
 
 | Tasks/Models | bsc-bio-es   | bsc-bio-ehr-es | XLM-R-Galén        | BETO-Galén   | mBERT-Galén  | mBERT        | BioBERT      | roberta-base-bne |
 |--------------|--------------|----------------|--------------------|--------------|--------------|--------------|--------------|------------------|
@@ -82,3 +82,23 @@ Finally, run the following command on the project main folder: `bash ner.sh [MOD
 
 ## Cite 📣
 To be announced soon!
+
+---
+
+## Funding
+This work was funded by the Spanish State Secretariat for Digitalization and Artificial Intelligence (SEDIA) within the framework of the Plan-TL.
+
+## Disclaimer
+
+The models published in this repository are intended for a generalist purpose and are available to third parties. These models may have bias and/or any other undesirable distortions.
+
+When third parties, deploy or provide systems and/or services to other parties using any of these models (or using systems based on these models) or become users of the models, they should note that it is their responsibility to mitigate the risks arising from their use and, in any event, to comply with applicable regulations, including regulations regarding the use of artificial intelligence.
+
+In no event shall the owner of the models (SEDIA – State Secretariat for digitalization and artificial intelligence) nor the creator (BSC – Barcelona Supercomputing Center) be liable for any results arising from the use made by third parties of these models.
+
+
+Los modelos publicados en este repositorio tienen una finalidad generalista y están a disposición de terceros. Estos modelos pueden tener sesgos y/u otro tipo de distorsiones indeseables.
+
+Cuando terceros desplieguen o proporcionen sistemas y/o servicios a otras partes usando alguno de estos modelos (o utilizando sistemas basados en estos modelos) o se conviertan en usuarios de los modelos, deben tener en cuenta que es su responsabilidad mitigar los riesgos derivados de su uso y, en todo caso, cumplir con la normativa aplicable, incluyendo la normativa en materia de uso de inteligencia artificial.
+
+En ningún caso el propietario de los modelos (SEDIA – Secretaría de Estado de Digitalización e Inteligencia Artificial) ni el creador (BSC – Barcelona Supercomputing Center) serán responsables de los resultados derivados del uso que hagan terceros de estos modelos.
