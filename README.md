@@ -53,19 +53,37 @@ The models have been fine-tuned on the the Named Entity Recognition (NER) tasks 
 | CANTEMIST    | 0.8220  | **0.8340**    | 0.8078 | 0.8153 | 0.8168 | 0.8116 | 0.8070  | 0.7875     |
 | ICTUSnet     | 0.8727 | **0.8756**   | 0.8716       | 0.8498 | 0.8509 | 0.8631 | 0.8521 | 0.8677 |
 
-## NER Usage example ⚗️
+## NER usage example ⚗️
+The following example, show how to use the PharmaCoNER fine-tuned NER model for inference:
 
 ```python
 
-from transformers import AutoTokenizer, AutoModelForTokenClassification
+from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
 
 tokenizer = AutoTokenizer.from_pretrained("PlanTL-GOB-ES/bsc-bio-ehr-es-pharmaconer")
 
 model = AutoModelForTokenClassification.from_pretrained("PlanTL-GOB-ES/bsc-bio-ehr-es-pharmaconer")
 
+pipe =  pipeline(task='token-classification', model='PlanTL-GOB-ES/bsc-bio-ehr-es-pharmaconer')
+
+sentence = 'Por el hallazgo de múltiples fracturas por estrés, se procedió a estudio en nuestras consultas, realizándose análisis con función renal, calcio sérico y urinario, calcio iónico, magnesio y PTH, que fueron normales.'
+results = pipe(sentence)
+
+print(results)
+
 ```
 
-## How to run ️▶️
+```
+# Expected output with the predicted entities:
+
+[
+  {'word': 'Ġcalcio', 'score': 0.9963880181312561, 'entity': 'B-NORMALIZABLES', 'index': 24, 'start': 137, 'end': 143}, {'word': 'Ġcalcio', 'score': 0.9965023398399353, 'entity': 'B-NORMALIZABLES', 'index': 29, 'start': 163, 'end': 169}, {'word': 'Ġmagnesio', 'score': 0.996299147605896, 'entity': 'B-NORMALIZABLES', 'index': 32, 'start': 178, 'end': 186}, {'word': 'ĠPTH', 'score': 0.9950509667396545, 'entity': 'B-PROTEINAS', 'index': 34, 'start': 189, 'end': 192}
+]
+
+```
+
+
+## How to fine-tune ️▶️
 
 1) First, clone the project:
 
