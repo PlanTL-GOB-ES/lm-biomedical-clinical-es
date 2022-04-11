@@ -7,8 +7,8 @@ We released our best models under the Apache License 2.0 to encourage the develo
 ### Pretrained models:
 We trained two models and make them available on HuggingFace' models hub at the following links:
 
- - [bsc-bio-es](https://huggingface.co/PlanTL-GOB-ES/roberta-base-biomedical-es): pretrained language model suitable for biomedical and clinical documents
- - [bsc-bio-ehr-es](https://huggingface.co/PlanTL-GOB-ES/roberta-base-biomedical-clinical-es): pretrained language model suitable for EHR documents and clinical notes
+ - [bsc-bio-es](https://huggingface.co/PlanTL-GOB-ES/bsc-bio-es): pretrained language model suitable for biomedical and clinical documents
+ - [bsc-bio-ehr-es](https://huggingface.co/PlanTL-GOB-ES/bsc-bio-ehr-es): pretrained language model suitable for EHR documents and clinical notes
 
 ### Fine-tuned NER models:
 We fine-tuned our models for the Named Entity Recognition (NER) task and make the best models available on HuggingFace' models hub at the following links:
@@ -54,7 +54,7 @@ The models have been fine-tuned on the the Named Entity Recognition (NER) tasks 
 | ICTUSnet     | 0.8727 | **0.8756**   | 0.8716       | 0.8498 | 0.8509 | 0.8631 | 0.8521 | 0.8677 |
 
 ## NER usage example ⚗️
-The following example, show how to use the PharmaCoNER fine-tuned NER model for inference:
+The following example, show how to predict entities the [bsc-bio-ehr-es](https://huggingface.co/PlanTL-GOB-ES/bsc-bio-ehr-es) model fine-tuned on the PharmaCoNER dataset:
 
 ```python
 
@@ -82,7 +82,6 @@ print(results)
 
 ```
 
-
 ## How to fine-tune ️▶️
 
 1) First, clone the project:
@@ -104,7 +103,7 @@ print(results)
 
 The `ner.sh` script fine-tune a pretrained language model for the NER task applying a linear classification head. By default, the fine-tuning run for 10 epochs with an evaluation on the development set at every epoch. The model achieving the best performance on the development set is selected as the final model and evaluated on the test set. The best trained model is store in a output path of the type `./output/model-$model_name/dataset-$dataset_name/seed-$seed` along with the checkpoints folders and the tensorboard data (inside the `tb` directory). 
 
-For example, to fine-tune the [bsc-bio-ehr-es](https://huggingface.co/PlanTL-GOB-ES/roberta-base-biomedical-clinical-es) language model on the PharmaCoNER dataset, run the command: 
+For example, to fine-tune the [bsc-bio-ehr-es](https://huggingface.co/PlanTL-GOB-ES/bsc-bio-ehr-es) language model on the PharmaCoNER dataset, run the command: 
 `bash ner.sh PlanTL-GOB-ES/bsc-bio-ehr-es PlanTL-GOB-ES/pharmaconer 42`
 
 ## Cite 📣
