@@ -107,8 +107,31 @@ For example, to fine-tune the [bsc-bio-ehr-es](https://huggingface.co/PlanTL-GOB
 `bash ner.sh PlanTL-GOB-ES/bsc-bio-ehr-es PlanTL-GOB-ES/pharmaconer 42`
 
 ## Cite 📣
-To be announced soon!
+If you use these models, please cite our work:
 
+```bibtext
+@inproceedings{carrino-etal-2022-pretrained,
+    title = "Pretrained Biomedical Language Models for Clinical {NLP} in {S}panish",
+    author = "Carrino, Casimiro Pio  and
+      Llop, Joan  and
+      P{\`a}mies, Marc  and
+      Guti{\'e}rrez-Fandi{\~n}o, Asier  and
+      Armengol-Estap{\'e}, Jordi  and
+      Silveira-Ocampo, Joaqu{\'\i}n  and
+      Valencia, Alfonso  and
+      Gonzalez-Agirre, Aitor  and
+      Villegas, Marta",
+    booktitle = "Proceedings of the 21st Workshop on Biomedical Language Processing",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.bionlp-1.19",
+    doi = "10.18653/v1/2022.bionlp-1.19",
+    pages = "193--199",
+    abstract = "This work presents the first large-scale biomedical Spanish language models trained from scratch, using large biomedical corpora consisting of a total of 1.1B tokens and an EHR corpus of 95M tokens. We compared them against general-domain and other domain-specific models for Spanish on three clinical NER tasks. As main results, our models are superior across the NER tasks, rendering them more convenient for clinical NLP applications. Furthermore, our findings indicate that when enough data is available, pre-training from scratch is better than continual pre-training when tested on clinical tasks, raising an exciting research question about which approach is optimal. Our models and fine-tuning scripts are publicly available at HuggingFace and GitHub.",
+}
+```
 ---
 
 ## Funding
