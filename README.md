@@ -8,7 +8,7 @@ We released our best models under the Apache License 2.0 to encourage the develo
 We trained two models and make them available on HuggingFace' models hub at the following links:
 
  - [bsc-bio-es](https://huggingface.co/PlanTL-GOB-ES/bsc-bio-es): pretrained language model suitable for biomedical and clinical documents
- - [bsc-bio-ehr-es](hthttps://huggingface.co/PlanTL-GOB-ES/longformer-base-4096-biomedical-clinical-estps://huggingface.co/PlanTL-GOB-ES/bsc-bio-ehr-es): pretrained language model suitable for EHR documents and clinical note
+ - [bsc-bio-ehr-es](https://huggingface.co/PlanTL-GOB-ES/longformer-base-4096-biomedical-clinical-estps://huggingface.co/PlanTL-GOB-ES/bsc-bio-ehr-es): pretrained language model suitable for EHR documents and clinical noteshttps://huggingface.co/PlanTL-GOB-ES/longformer-base-4096-biomedical-clinical-es
  - [longformer-base-4096-biomedical-clinical-es](https://huggingface.co/PlanTL-GOB-ES/longformer-base-4096-biomedical-clinical-es): Longformer version of the roberta-base-biomedical-clinical-es model. 
 
 ### Fine-tuned NER models:
