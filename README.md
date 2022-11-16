@@ -140,6 +140,12 @@ If you use these models, please cite our work:
 ```
 ---
 
+## License
+
+This project is licensed under the [Apache License, Version 2.0](LICENSE)
+
+Copyright (c) 2021 Secretaría de Estado de Digitalización e Inteligencia Artificial (SEDIA)
+
 ## Funding
 This work was funded by the Spanish State Secretariat for Digitalization and Artificial Intelligence (SEDIA) within the framework of the Plan-TL.
 
