@@ -9,6 +9,8 @@ We trained two models and make them available on HuggingFace' models hub at the 
 
  - [bsc-bio-es](https://huggingface.co/PlanTL-GOB-ES/bsc-bio-es): pretrained language model suitable for biomedical and clinical documents
  - [bsc-bio-ehr-es](https://huggingface.co/PlanTL-GOB-ES/bsc-bio-ehr-es): pretrained language model suitable for EHR documents and clinical noteshttps://huggingface.co/PlanTL-GOB-ES/longformer-base-4096-biomedical-clinical-es
+
+Additionally, a Longformer version has been trained to be able to work with tasks that require larger contexts, such as clinical coding. The corpora used is the same as below. Model can also be found on Hugginface:
  - [longformer-base-4096-biomedical-clinical-es](https://huggingface.co/PlanTL-GOB-ES/longformer-base-4096-biomedical-clinical-es): Longformer version of the roberta-base-biomedical-clinical-es model. 
 
 ### Fine-tuned NER models:
